@@ -1,0 +1,25 @@
+public Form1()
+        {
+            InitializeComponent();
+
+            // Llama a un método para configurar y mostrar el gráfico
+            ConfigurarYMostrarGrafico();
+        }
+
+        private void ConfigurarYMostrarGrafico()
+        {
+            // Configura el título del gráfico
+            chart1.Titles.Add("Ejemplo de Gráfico de Barras");
+
+            // Agrega una serie al gráfico
+            Series serie = chart1.Series.Add("Datos");
+
+            // Agrega algunos puntos de datos a la serie
+            serie.Points.Add(5);
+            serie.Points.Add(12);
+            serie.Points.Add(7);
+            serie.Points.Add(15);
+
+            // Configura el tipo de gráfico (en este caso, de barras)
+            serie.ChartType = SeriesChartType.Bar;
+        }
